@@ -4,7 +4,12 @@ const ctx = canvas.getContext("2d");
 let x = 100;
 let y = 100;
 let radius = 50;
+let speed = 10;
+
+let upPressed = false;
 let downPressed = false;
+let leftPressed = false;
+let rightPressed = false;
 
 // Game Loop
 function drawGame(){
@@ -15,8 +20,17 @@ function drawGame(){
 }
 
  function inputs() {
+    if(upPressed) {
+        y = y - speed;
+    }
     if (downPressed) {
-        y = y + 10;
+        y = y + speed;
+    }
+    if (leftPressed) {
+        x = x - speed;
+    }
+    if (rightPressed) {
+        x = x + speed;
     }
  }
 
