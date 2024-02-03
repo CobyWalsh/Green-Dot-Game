@@ -56,6 +56,18 @@ function boundryCheck() {
 
 function drawGreenBlob(){
     ctx.fillStyle = "purple";
+    if(upPressed) {
+        ctx.fillStyle = "yellow";
+    }
+    if(downPressed) {
+        ctx.fillStyle = "green";
+    }
+    if(leftPressed) {
+        ctx.fillStyle = "red";
+    }
+    if(rightPressed) {
+        ctx.fillStyle = "blue";
+    }
     ctx.beginPath();
     ctx.arc(x,y, radius,0, Math.PI * 2);
     ctx.fill();
